@@ -1,0 +1,62 @@
+/*
+ #0EB349: Green Pantone
+ #0F75B3: Star Command Blue
+ #520EB3: Purple
+ */
+
+/* General Properties */
+body {
+    margin: 0em;
+    font-family: "Avenir Next";
+    min-width: 850px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 5em;
+    color: #0EB349;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+}
+
+/* Navigation Bar: Home, Product, and Development Pages */
+#nav {
+    background: #0F75B3;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+#nav > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    margin: 0em 1em 0em 1em;
+    font-size: 1.75em;
+    flex-shrink: 1;
+}
+
+/* Image */
+#outline {
+    max-width: 1150px;
+    width = 50%;
+    display: block;
+    display: block;
+    margin: 3em auto;
+}
+
+/* Footer */
+footer {
+    background-color: #0F75B3;
+    padding: 0.5em 0.75em;
+    color: white;
+    font-style: italic;
+}
