@@ -17,7 +17,7 @@ a {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     color: #0EB349;
     text-align: center;
     margin: 0.5em 0 0 0;
@@ -31,6 +31,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
+    min-width: 800px;
 }
 
 #nav > * {
@@ -40,23 +41,97 @@ h1 {
 
 .links {
     margin: 0em 1em 0em 1em;
-    font-size: 1.75em;
+    font-size: 1.25em;
     flex-shrink: 1;
 }
 
-/* Image */
-#outline {
-    max-width: 1150px;
-    width = 50%;
+/* Process Map */
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body > h1 {
+    padding: 0.25em 0em;
+    min-width: 800px;
+}
+
+.map {
+    max-width: 100vw;
+    min-width: 800px;
+    position: relative;
+}
+
+.map > img {
+    padding: 3.33em 0em;
+    width: 80%;
+    object-fit: contain;
     display: block;
-    display: block;
-    margin: 3em auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overlay > * {
+    position: absolute;
+    margin: 0.1em;
+    border-radius: 7.5px;
+}
+
+.overlay > img:hover {
+    background-color: rgba(195, 195, 195, 0.5);
+}
+
+#a1 {
+    top: min(36.67px, calc(56.67px - 2vw));
+    left: max(40px, 5vw);
+    width: max(80px, 10vw);
+}
+#a2 {
+    top: min(36.67px, calc(52.7px - 2vw));
+    left: max(253.33px, 32.5vw);
+    width: max(80px, 10vw);
+}
+#a4 {
+    top: min(23.33px, calc(50px - 3vw));
+    left: max(433.3px, 55vw);
+    width: max(80px, 10vw);
+}
+#a5 {
+    top: max(316.67px, calc(56.67px + 32.5vw));
+    left: max(40px, 5vw);
+    width: max(80px, 10vw);
+}
+#a6 {
+    top: max(316.67px, calc(56.67px + 32.5vw));
+    left: max(253.33px, 32vw);
+    width: max(80px, 10vw);
+}
+#a7 {
+    top: max(185px, calc(44px + 17vw));
+    left: max(390px, 48vw);
+    width: max(80px, 10vw);
+}
+#a9 {
+    top: max(185px, calc(44px + 17vw));
+    left: max(533.33px, 66.8vw);
+    width: max(80px, 10vw);
+}
+#a10 {
+    top: max(185px, calc(44px + 17vw));
+    left: max(683.33px, 85.605vw);
+    width: max(80px, 10vw);
 }
 
 /* Footer */
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-width: 800px;
     background-color: #0F75B3;
-    padding: 0.5em 0.75em;
+    margin-top: 0.75em;
+    padding: 0.5em 0em;
     color: white;
+    font-size: 12px;
     font-style: italic;
 }
