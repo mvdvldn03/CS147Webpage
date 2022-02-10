@@ -11,16 +11,18 @@ body {
     min-width: 850px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 h1 {
     font-size: 4em;
     color: #0EB349;
     text-align: center;
     margin: 0.5em 0 0 0;
+}
+
+h2 {
+    margin: 0em 0.4em;
+    margin-top: 0.75em;
+    font-size: 1.85em;
+    color: #0EB349;
 }
 
 /* Navigation Bar: Home, Product, and Development Pages */
@@ -30,7 +32,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.05em;
     min-width: 800px;
 }
 
@@ -45,12 +47,12 @@ h1 {
     flex-shrink: 1;
 }
 
-/* Process Map */
-body {
-    position: relative;
-    min-height: 100vh;
+.links > a {
+    text-decoration: none;
+    color: white;
 }
 
+/* Process Map */
 body > h1 {
     padding: 0.25em 0em;
     min-width: 800px;
@@ -122,11 +124,26 @@ body > h1 {
     width: max(80px, 10vw);
 }
 
+/* Process Details */
+#details > article {
+    display: flex;
+    padding: 0.25em 1em 0.25em 0.25em;
+}
+
+#details > article > p {
+    padding-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stations {
+    max-width: 100px;
+    padding: 0.25em;
+}
+
 /* Footer */
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     min-width: 800px;
     background-color: #0F75B3;
     margin-top: 0.75em;
