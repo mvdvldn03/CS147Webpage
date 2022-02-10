@@ -36,7 +36,7 @@ function scroll(element, duration) {
 }
 
 const main = () => {
-    for
+    for(
     
     //Event Listener for dynamically created elements: Card and Move Here Buttons
     document.querySelector("#board").addEventListener("click", event => {
