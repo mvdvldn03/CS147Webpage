@@ -17,20 +17,21 @@ a {
 }
 
 h1 {
-    font-size: 7.5em;
+    font-size: 6.5em;
     color: #0EB349;
 }
 h2 {
     margin: 0px;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #0EB349;
 }
 h3 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin: 0;
+    font-weight: normal;
 }
 p {
-    font-size: 1.4em;
+    font-size: 1.15em;
     text-align: justify;
 }
 
@@ -61,7 +62,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.05em;
+    min-width: 800px;
 }
 
 #nav > * {
@@ -71,7 +73,7 @@ p {
 
 .links {
     margin: 0em 1em 0em 1em;
-    font-size: 1.75em;
+    font-size: 1.25em;
     flex-shrink: 1;
 }
 
@@ -117,7 +119,7 @@ p {
 .desc {
     font-weight: normal;
     font-style: italic;
-    font-size: 1.65em;
+    font-size: 1.4em;
 }
 
 .profile > img {
