@@ -1,63 +1,35 @@
-function getElemPos(query) {
-  return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
+function getElemPos(elem) {
+  return window.pageYOffset + elem.getBoundingClientRect().top;
 }
 
-function scroll(element, duration) {
-    var start_y = window.pageYOffset
-    var elem_y = getElemPos(element)
-  // If element is close to page's bottom then window will scroll only to some position above the element.
-  var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
-    var diff = targetY - startingY
-  // Easing function: easeInOutCubic
-  // From: https://gist.github.com/gre/1650294
-  var easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
-  var start
-
-  if (!diff) return
-
-    // Bootstrap our animation - it will get called right before next frame shall be rendered.
+function scroll(event) {
+    let target = document.querySelectorAll(`.${event.currentTarget.classList[1]}`)[1];
+    let elem_y = getElemPos(target);
+    
+    let start_y = window.pageYOffset;
+    let target_y = document.body.scrollHeight - elem_y < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elem_y;
+    let diff = target_y - start_y;
+    let easing = function (t) { return t < 0.5 ? 4*t**3 : 4*(t - 1)**3 + 1};
+    let start;
+    
+    if (!diff) return;
+        
     window.requestAnimationFrame(function step(timestamp) {
-    if (!start) start = timestamp
-    // Elapsed miliseconds since start of scrolling.
-    var time = timestamp - start
-        // Get percent of completion in range [0, 1].
-    var percent = Math.min(time / duration, 1)
-    // Apply the easing.
-    // It can cause bad-looking slow frames in browser performance tool, so be careful.
-    percent = easing(percent)
-
-    window.scrollTo(0, startingY + diff * percent)
-
-        // Proceed with animation as long as we wanted it to.
-    if (time < duration) {
-      window.requestAnimationFrame(step)
-    }
-  })
+        if (!start) start = timestamp;
+        let time = timestamp - start;
+        let percent = Math.min(time / 2000, 1);
+        percent = easing(percent);
+        window.scrollTo(0, start_y + diff * percent);
+        if (time < 2000) {
+            window.requestAnimationFrame(step)
+        }
+    })
 }
 
 const main = () => {
-    for(
-    
-    //Event Listener for dynamically created elements: Card and Move Here Buttons
-    document.querySelector("#board").addEventListener("click", event => {
-        let button = event.target.parentNode;
-        
-        //Delete Card Button Listener
-        if(button.className === "delete") {
-            deleteCardEvent(button);
-        }
-        
-        //Select Card Button Listener
-        if(button.className === "startMove") {
-            selectCardEvent(button);
-        }
-        
-        //Move Card Button Listener
-        if(button.className === "divider") {
-            moveCardEvent(button);
-        }
-    });
-    
-    
+    let stages = document.querySelectorAll(".stage")
+    for(let a = 0; a < stages.length; a++) {
+        stages[a].addEventListener("click", scroll)
+    }
 };
 main();

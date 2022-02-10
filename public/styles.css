@@ -34,6 +34,7 @@ p {
 
 /* Banner: Title/Value Proposition*/
 
+#banner {margin: 2em 0em}
 #banner > * {margin: 0em}
 #banner > h3 {font-style: italic}
 
