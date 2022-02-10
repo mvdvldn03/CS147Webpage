@@ -49,7 +49,7 @@ body > h1 {
 .stage {width: min(max(80px, 10vw), 120px)}
 .stage.a1, .stage.a2 {top: max(min(37px, calc(57px - 2vw)), 33px)}
 .stage.a5, .stage.a6 {top: min(max(317px, calc(53px + 33vw)), 449px)}
-.stage.a7, .stage.a9, .stage.a10 {top: min(max(180px, calc(44px + 17vw)), 249px)}
+.stage.a8, .stage.a9, .stage.a10 {top: min(max(180px, calc(44px + 17vw)), 249px)}
 .stage.a1, .stage.a5 {left: min(max(40px, 5vw), 60px)}
 .stage.a2, .stage.a6 {left: min(max(264px, 33vw), 396px)}
 
@@ -57,7 +57,7 @@ body > h1 {
     top: max(min(23px, calc(55px - 4vw)), 7px);
     left: min(max(440px, 55vw), 660px);
 }
-.stage.a7 {
+.stage.a8 {
     left: min(max(400px, 50vw), 600px);
 }
 .stage.a9 {
