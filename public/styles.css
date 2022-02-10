@@ -5,31 +5,8 @@
  */
 
 /* General Properties */
-body {
-    margin: 0em;
-    font-family: "Avenir Next";
-    min-width: 800px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-h1 {
-    font-size: 6.5em;
-    color: #0EB349;
-}
-h2 {
-    margin: 0px;
-    font-size: 2em;
-    color: #0EB349;
-}
-h3 {
-    font-size: 1.5em;
-    margin: 0;
-    font-weight: normal;
-}
+h1 {font-size: 6.5em}
+h2 {margin: 0px}
 p {
     font-size: 1.15em;
     text-align: justify;
@@ -55,65 +32,29 @@ p {
     margin: 0em 0.75em;
 }
 
-/* Navigation Bar: Home, Product, and Development Pages */
-#nav {
-    background: #0F75B3;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.05em;
-    min-width: 800px;
-}
-
-#nav > * {
-    display: flex;
-    justify-content: space-between;
-}
-
-.links {
-    margin: 0em 1em 0em 1em;
-    font-size: 1.25em;
-    flex-shrink: 1;
-}
-
 /* Banner: Title/Value Proposition*/
-#banner {
-    text-align: center;
-    margin: 2em 0em;
-}
 
 #banner > * {margin: 0em}
 #banner > h3 {font-style: italic}
 
-/* Mission: Problem Statement */
-#mission {
-    padding: 1.25em;
-    display: flex;
-}
-
-/* Product and Description */
-#product {
-    padding: 1.25em;
-    display: flex;
-}
-
-/* Design Process: Assignment Links */
-#process {
+/* Mission: Problem Statement, Product and Description, Design Process: Assignment Links */
+#mission, #product, #process {
     padding: 1.25em;
     display: flex;
 }
 
 /* Team: Description and Roles*/
 #team {
-    margin: 2em 0em;
     text-align: center;
+}
+
+#team > * {
+    margin: 0.75em auto;
 }
 
 #team > article {
     display: flex;
     justify-content: space-evenly;
-    margin: 2em 0em;
 }
 
 .desc {
@@ -125,12 +66,4 @@ p {
 .profile > img {
     border-radius: 50%;
     margin: 0px 0px 10px 0px;
-}
-
-/* Footer */
-footer {
-    background-color: #0F75B3;
-    padding: 0.5em 0.75em;
-    color: white;
-    font-style: italic;
 }

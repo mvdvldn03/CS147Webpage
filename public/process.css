@@ -4,52 +4,15 @@
  #520EB3: Purple
  */
 
-/* General Properties */
-body {
-    margin: 0em;
-    font-family: "Avenir Next";
-    min-width: 850px;
-}
-
+/* Page-Specific General Properties */
 h1 {
     font-size: 4em;
-    color: #0EB349;
-    text-align: center;
     margin: 0.5em 0 0 0;
 }
 
 h2 {
     margin: 0em 0.4em;
     margin-top: 0.75em;
-    font-size: 1.85em;
-    color: #0EB349;
-}
-
-/* Navigation Bar: Home, Product, and Development Pages */
-#nav {
-    background: #0F75B3;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.05em;
-    min-width: 800px;
-}
-
-#nav > * {
-    display: flex;
-    justify-content: space-between;
-}
-
-.links {
-    margin: 0em 1em 0em 1em;
-    font-size: 1.25em;
-    flex-shrink: 1;
-}
-
-.links > a {
-    text-decoration: none;
-    color: white;
 }
 
 /* Process Map */
@@ -59,7 +22,7 @@ body > h1 {
 }
 
 .map {
-    max-width: 100vw;
+    max-width: 1200px;
     min-width: 800px;
     position: relative;
 }
@@ -83,45 +46,45 @@ body > h1 {
     background-color: rgba(195, 195, 195, 0.5);
 }
 
-#a1 {
-    top: min(36.67px, calc(56.67px - 2vw));
-    left: max(40px, 5vw);
-    width: max(80px, 10vw);
+.a1 {
+    top: max(min(37px, calc(57px - 2vw)), 33px);
+    left: min(max(40px, 5vw), 60px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a2 {
-    top: min(36.67px, calc(52.7px - 2vw));
-    left: max(253.33px, 32.5vw);
-    width: max(80px, 10vw);
+.a2 {
+    top: max(min(37px, calc(57px - 2vw)), 33px);
+    left: min(max(264px, 33vw), 396px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a4 {
-    top: min(23.33px, calc(50px - 3vw));
-    left: max(433.3px, 55vw);
-    width: max(80px, 10vw);
+.a4 {
+    top: max(min(23px, calc(55px - 4vw)), 7px);
+    left: min(max(440px, 55vw), 660px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a5 {
-    top: max(316.67px, calc(56.67px + 32.5vw));
-    left: max(40px, 5vw);
-    width: max(80px, 10vw);
+.a5 {
+    top: min(max(317px, calc(53px + 33vw)), 449px);
+    left: min(max(40px, 5vw), 60px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a6 {
-    top: max(316.67px, calc(56.67px + 32.5vw));
-    left: max(253.33px, 32vw);
-    width: max(80px, 10vw);
+.a6 {
+    top: min(max(317px, calc(53px + 33vw)), 449px);
+    left: min(max(264px, 33vw), 396px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a7 {
-    top: max(185px, calc(44px + 17vw));
-    left: max(390px, 48vw);
-    width: max(80px, 10vw);
+.a7 {
+    top: min(max(180px, calc(44px + 17vw)), 249px);
+    left: min(max(400px, 50vw), 600px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a9 {
-    top: max(185px, calc(44px + 17vw));
-    left: max(533.33px, 66.8vw);
-    width: max(80px, 10vw);
+.a9 {
+    top: min(max(180px, calc(44px + 17vw)), 249px);
+    left: min(max(536px, 67vw), 804px);
+    width: min(max(80px, 10vw), 120px);
 }
-#a10 {
-    top: max(185px, calc(44px + 17vw));
-    left: max(683.33px, 85.605vw);
-    width: max(80px, 10vw);
+.a10 {
+    top: min(max(180px, calc(44px + 17vw)), 249px);
+    left: min(max(688px, 86vw), 1032px);
+    width: min(max(80px, 10vw), 120px);
 }
 
 /* Process Details */
@@ -148,15 +111,4 @@ body > h1 {
     max-width: 100px;
     padding: 0.25em;
     object-fit: contain;
-}
-
-/* Footer */
-footer {
-    min-width: 800px;
-    background-color: #0F75B3;
-    margin-top: 0.75em;
-    padding: 0.5em 0em;
-    color: white;
-    font-size: 12px;
-    font-style: italic;
 }
